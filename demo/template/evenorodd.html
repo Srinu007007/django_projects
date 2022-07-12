@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block contect %}
+
+
+  <h1 style="text-align: center;">Home page</h1>
+
+  <br>
+  <br>
+
+  <h2 style="text-align: center;">Even Or Odd Cheking</h2>
+
+  <center><form method="post">
+    {% csrf_token %}
+    {% if error %}
+    <h3 style="color: red;">Please Enter a no</h3>
+    {% endif %}
+
+    <label>Eneter a no:</label><input type="text" name="no"><br><br>
+    <input type="submit" value="Check"><br>
+  </form>
+  <label>Output:</label><input type="text" name="output" value="{{check}}">
+</center>
+  
+
+  {% endblock %}
+

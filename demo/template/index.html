@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block contect %}
+
+
+  <h1 style="text-align: center;">Home page</h1>
+
+  <br>
+  <br>
+  <h2 style="text-align: center;">Calucation</h2>
+  <center>
+    <form method="get">
+        <label>Enter a no:  </label>
+            <input type="text" name="num1"><br>
+        <label>Enter a no:  </label>
+            <input type="text" name="num2"><br>
+            <br>
+            <input type="submit" value="Add">
+    </form>
+    <label>Answer is:  </label>
+    <input type="text" name="" value="{{ res1 }}"><br>
+  </center>
+
+  {% endblock %}
+

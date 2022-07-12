@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block contect %}
+
+
+  <h1 style="text-align: center;">Home page</h1>
+
+  <br>
+  <br>
+  <h2 style="text-align: center;">Student Results</h2>
+
+  <form method="post" style="margin-left: 40%;">
+    {% csrf_token %}
+    <label>Subject Marks 1: </label>
+    <input type="text" name="sub1" placeholder="Enter Marks"><br>
+    <label>Subject Marks 2: </label>
+    <input type="text" name="sub2" placeholder="Enter Marks"><br>
+    <label>Subject Marks 3: </label>
+    <input type="text" name="sub3" placeholder="Enter Marks"><br>
+    <label>Subject Marks 4: </label>
+    <input type="text" name="sub4" placeholder="Enter Marks"><br>
+    <label>Subject Marks 5: </label>
+    <input type="text" name="sub5" placeholder="Enter Marks"><br>
+    <input type="submit" value="Check Results">
+  </form>
+
+  <label>.........Result.........</label><br>
+    <label>Total Marks: </label>
+    <input type="text" name="tot" placeholder="Total Marks" value="{{total}}"><br>
+    <label>Average: </label>
+    <input type="text" name="avg" placeholder="Average" value="{{average}}"><br>
+    <label>Grade: </label>
+    <input type="text" name="sub5" placeholder="Grade" value="{{grade}}"><br>
+
+  {% endblock %}
+

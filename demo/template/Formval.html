@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block contect %}
+
+
+  <h1 style="text-align: center;">Register page</h1>
+<div class="container">  
+  <form method="post">
+  {% csrf_token %} 
+  
+  {% if nameerror %}
+  <div class="alert alert-danger" role="alert">
+    Please Enter Your Name
+  </div>
+  {% endif %}
+    
+  {% if emailerror %}
+  <div class="alert alert-danger" role="alert">
+    Please Enter Your Email Id
+  </div>
+  {% endif %}
+    
+  {% if passworderror %}
+  <div class="alert alert-danger" role="alert">
+    Please Enter Your Password
+  </div>
+  {% endif %}
+    
+    <label>Name:</label>
+    <div class="form-group  col-lg-4">      
+       <input type="text" name="name" placeholder="Enter a name" class="form-control" value="">       
+    </div>
+    <label>Email:</label>
+    <div class="form-group  col-lg-4">      
+       <input type="email" name="email" placeholder="Enter a Email" class="form-control" value="">       
+    </div>
+    <label>Password:</label> 
+    <div class="form-group  col-lg-4">     
+      
+       <input type="password" name="password" placeholder="Enter a name" class="form-control" value="">       
+    </div><br>
+    <input type="submit" value="Register" class="btn btn-primary">
+
+    
+
+  </form>
+</div>
+
+Thank your {{name1}}
+  {% endblock %}
+
