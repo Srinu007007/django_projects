@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <ul>
+        <a href="{% url 'home' %}"><li>Home</li></a>
+        <a href="{% url 'about' %}"><li>About</li></a>
+        <a href="{% url 'contact' %}"><li>Contact</li></a>
+
+    </ul>
+
+    <center><form method="get">
+        <input type="text" name="num1" placeholder="enter a number"><br>
+        <input type="text" name="num2" placeholder="Enter a number"><br>
+        <input type="submit" value="add">        
+
+
+    </form>
+    <input type="text" value="{{ans}}"
+</center>
+</body>
+</html>

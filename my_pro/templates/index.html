@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+</head>
+<body>
+
+    <h1>Welcomeeeeeee ..........................{{title}}   {{friends}}</h1>
+
+    {% for i in friends%}
+    <h1>{{forloop.revcounter}} {{i}}</h1>
+    {% endfor %}
+
+    <table border="1">
+        <tr>
+            <th>Sno</th>
+            <th>name </th>
+            <th>Phone </th>
+        </tr>
+        {% for j in info%}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{j.name}}</td>
+            <td>{{j.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <input type="date">
+  
+    <ul>
+        <a href="{% url 'home' %}"><li>Home</li></a>
+        <a href="{% url 'about' %}"><li>About</li></a>
+        <a href="{% url 'contact' %}"><li>Contact</li></a>
+
+    </ul>
+</body>
+</html>
